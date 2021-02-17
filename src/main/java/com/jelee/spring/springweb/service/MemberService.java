@@ -3,14 +3,18 @@ package com.jelee.spring.springweb.service;
 import com.jelee.spring.springweb.domain.Member;
 import com.jelee.spring.springweb.repository.MemberRepository;
 import com.jelee.spring.springweb.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
