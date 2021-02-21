@@ -1,5 +1,6 @@
 package com.jelee.spring.springweb;
 
+import com.jelee.spring.springweb.aop.TimeTraceAop;
 import com.jelee.spring.springweb.repository.MemberRepository;
 import com.jelee.spring.springweb.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
 
     /*@Bean
     public MemberRepository memberRepository(){
